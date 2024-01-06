@@ -1,31 +1,16 @@
-use std::rc::Rc;
+# stammer_nannou
+This crate makes it easy to show a `stammer` Panel in a `nannou` program.
 
-use nannou::prelude::*;
-use stammer::elements::builder::ElementBuilder;
-use stammer::elements::Element;
+# Usage
+for now the easiest way to add this crate to your project is to add it to
+your `Cargo.toml` by adding the dependency using git.
+```toml
+stammer_nannou = { git = "https://github.com/BaukeWestendorp/stammer_nannou" }
+```
 
-const WIDTH: u32 = 512;
-const HEIGHT: u32 = 512;
-
-fn main() {
-    nannou::app(model).loop_mode(LoopMode::Wait).run();
-}
-
-struct Model {
-    window_id: WindowId,
-}
-
-fn model(app: &App) -> Model {
-    let window_id = app
-        .new_window()
-        .size(WIDTH, HEIGHT)
-        .view(view)
-        .build()
-        .unwrap();
-
-    Model { window_id }
-}
-
+# Examples
+Here is a simple view function for `nannou` that uses the `panel_to_texture` function.
+```rust
 fn view(app: &App, model: &Model, frame: Frame) {
     let draw = app.draw();
     let window = app.window(model.window_id).unwrap();
@@ -52,3 +37,7 @@ fn view(app: &App, model: &Model, frame: Frame) {
     draw.texture(&texture);
     draw.to_frame(app, &frame).unwrap();
 }
+```
+
+
+Made with <3 by Bauke
