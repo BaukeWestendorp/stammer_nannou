@@ -5,7 +5,7 @@ This crate makes it easy to show a `stammer` Panel in a `nannou` program.
 for now the easiest way to add this crate to your project is to add it to
 your `Cargo.toml` by adding the dependency using git.
 ```toml
-stammer_nannou = { git = "https://github.com/BaukeWestendorp/stammer_nannou" }
+stammer_nannou = { git = "https://github.com/BaukeWestendorp/stammer_nannou", branch = "main" }
 ```
 
 # Examples

@@ -6,4 +6,4 @@ license = "MIT"
 
 [dependencies]
 nannou = "0.18.1"
-stammer = { git = "https://git.sr.ht/~ma3ke/stammer" }
+stammer = { git = "https://git.sr.ht/~ma3ke/stammer", branch = "main" }
