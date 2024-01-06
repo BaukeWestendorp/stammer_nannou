@@ -1,0 +1,8 @@
+[package]
+name = "stammer_nannou"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+nannou = "0.18.1"
+stammer = { git = "https://git.sr.ht/~ma3ke/stammer" }
